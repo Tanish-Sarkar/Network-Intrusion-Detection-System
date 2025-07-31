@@ -1,7 +1,9 @@
 from src.data_loader import load_data
-from src.preprocessing import preprocess_data, split_data
-# from src.model import train_model, save_model
-# from src.utils import save_metrics
+from src.preprocessing import preprocess_data
+from src.anomaly import dbscan_anomaly
+from src.clustering import apply_dbscan
+from src.dimensionality import apply_tsne
+from src.utils import plot_clusters
 import os
 
 def main():
@@ -15,22 +17,19 @@ def main():
     X, y = preprocess_data(df)
     print("✅ Data Preprocessed...")
 
-    # X_train, X_test, y_train, y_test = split_data(X, y)
-    # print("✅ Data Split into Train/Test")
+    # Dimensionality Reduction
+    X_tsne, _ = apply_tsne(X)
+    print("✅ PCA Completed...")
 
-    # model = train_model(X_train, y_train)
-    # print("✅ Model Trained...")
+    # Clustering
+    labels_dbscans, _ = apply_dbscan(X)
+    plot_clusters(X_tsne, labels_dbscans, "DBSCAN Clustering (t-SNE Projection)")
 
-    # metrics = evaluate_model(model, X_test, y_test)
-    # print("✅ Model Evaluated...")
+    # Anomaly Detection
+    labels_dbscans, _ = dbscan_anomaly(X)
+    plot_clusters(X_tsne, labels_dbscans, "DBSCAN Outliers (t-SNE Projection)")
 
-    # print("📊 Plotting Confusion Matrix...")
-    # y_pred = model.predict(X_test)
-    # plot_confusion_matrix(y_test, y_pred)
-
-    # print("💾 Saving Model and Metrics...")
-    # save_model(model, "outputs/LogisticModel.joblib")
-    # save_metrics(metrics)
+    
 
 if __name__ == "__main__":
     main()
