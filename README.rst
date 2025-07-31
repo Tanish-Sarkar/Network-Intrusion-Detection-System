@@ -49,8 +49,7 @@ It includes:
 
 ## 🧱 Folder Structure
 
-```
-network-intrusion-detection/
+```network-intrusion-detection/
 │
 ├── data/
 │   └── raw/
