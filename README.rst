@@ -1,6 +1,6 @@
-# 🔍 Anomaly Detection & Clustering in High-Dimensional Data
+# Anomaly Detection & Clustering in High-Dimensional Data
 
-## 📌 Overview
+## Overview
 
 In real-world data, patterns often hide in complex, high-dimensional spaces. Detecting those patterns — or deviations from them — is crucial for everything from **fraud detection** and **network security** to **market segmentation** and **fault monitoring**.
 
@@ -12,7 +12,7 @@ This project explores the power of **unsupervised learning** to:
 
 ---
 
-## 🎯 Why This Project Matters
+## Why This Project Matters
 
 Unlike supervised learning, where labeled data is readily available, most real-world datasets are **unlabeled**. Unsupervised techniques allow us to extract insights without explicit labels. This is invaluable in domains like:
 
@@ -25,7 +25,7 @@ With the growing scale and complexity of data, it's becoming essential to combin
 
 ---
 
-## 🚀 Why I Took On This Project
+## Why I Took On This Project
 
 This project challenged me to:
 
@@ -41,7 +41,7 @@ It helped sharpen my understanding of:
 
 ---
 
-## 📂 Project Highlights
+## Project Highlights
 
 * **Dimensionality Reduction** for visualization and computational efficiency
 * **Clustering Analysis** to reveal patterns and groupings
@@ -50,13 +50,13 @@ It helped sharpen my understanding of:
 
 ---
 
-## 📊 Dataset
+## Dataset
 
 This project uses a high-dimensional, unlabeled dataset to simulate a real-world use case where we must uncover structure and detect outliers — all without labels.
 
 ---
 
-## ✅ Outcome
+## Outcome
 
 This project deepened my understanding of the **core unsupervised learning toolkit** and showed how it can be applied in **security, business intelligence, and operations**. It was also a stepping stone toward more advanced topics like **representation learning and generative models**.
 * Visual clustering of normal vs abnormal traffic
